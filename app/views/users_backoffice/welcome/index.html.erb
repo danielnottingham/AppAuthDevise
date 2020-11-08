@@ -1,7 +1,5 @@
-<h1>UsersBackoffice::Welcome#index</h1>
+<h1>Users Backoffice</h1>
 
-<% name = current_user.present? ? current_user.email : 'Stranger' %>
+<h1>Welcome, <%= current_user.email %> </h1>
 
-<h1>Welcome, <%= name %> </h1>
 
-<%= link_to 'Site home', site_home_index_path %>
