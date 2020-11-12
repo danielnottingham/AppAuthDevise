@@ -1,0 +1,52 @@
+<%= form_with(model: controle_portarium, local: true) do |form| %>
+  <% if controle_portarium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(controle_portarium.errors.count, "error") %> prohibited this controle_portarium from being saved:</h2>
+
+      <ul>
+        <% controle_portarium.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :documento %>
+    <%= form.text_field :documento %>
+  </div>
+
+  <div class="field">
+    <%= form.label :empresa %>
+    <%= form.text_field :empresa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :placa %>
+    <%= form.text_field :placa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :entrada %>
+    <%= form.datetime_select :entrada %>
+  </div>
+
+  <div class="field">
+    <%= form.label :saida %>
+    <%= form.datetime_select :saida %>
+  </div>
+
+  <div class="field">
+    <%= form.label :obs %>
+    <%= form.text_area :obs %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

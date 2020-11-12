@@ -1,0 +1,2 @@
+class ControleVeiculo < ApplicationRecord
+end

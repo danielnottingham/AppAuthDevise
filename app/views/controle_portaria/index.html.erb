@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Controle Portaria</h1>
+
+<table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Documento</th>
+      <th>Empresa</th>
+      <th>Placa</th>
+      <th>Entrada</th>
+      <th>Saida</th>
+      <th>Obs</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @controle_portaria.each do |controle_portarium| %>
+      <tr>
+        <td><%= controle_portarium.nome %></td>
+        <td><%= controle_portarium.documento %></td>
+        <td><%= controle_portarium.empresa %></td>
+        <td><%= controle_portarium.placa %></td>
+        <td><%= controle_portarium.entrada %></td>
+        <td><%= controle_portarium.saida %></td>
+        <td><%= controle_portarium.obs %></td>
+        <td><%= link_to 'Show', controle_portarium, class: "btn btn-warning" %></td>
+        <td><%= link_to 'Edit', edit_controle_portarium_path(controle_portarium), class: "btn btn-secondary" %></td>
+        <td><%= link_to 'Destroy', controle_portarium, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Controle Portarium', new_controle_portarium_path, class: "btn btn-success" %>
+<br><br>
+<%= link_to 'Home', users_backoffice_welcome_index_path,  class: "btn btn-dark"%>
+
