@@ -25,6 +25,7 @@ class ControleVeiculosController < ApplicationController
   # POST /controle_veiculos
   # POST /controle_veiculos.json
   def create
+    binding.pry
     @controle_veiculo = ControleVeiculo.new(controle_veiculo_params)
 
     respond_to do |format|
