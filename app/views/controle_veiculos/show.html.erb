@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Motorista:</strong>
+  <%= @controle_veiculo.motorista %>
+</p>
+
+<p>
+  <strong>Placa:</strong>
+  <%= @controle_veiculo.placa %>
+</p>
+
+<p>
+  <strong>Entrada:</strong>
+  <%= @controle_veiculo.entrada %>
+</p>
+
+<p>
+  <strong>Saida:</strong>
+  <%= @controle_veiculo.saida %>
+</p>
+
+<p>
+  <strong>Obs:</strong>
+  <%= @controle_veiculo.obs %>
+</p>
+
+<%= link_to 'Edit', edit_controle_veiculo_path(@controle_veiculo) %> |
+<%= link_to 'Back', controle_veiculos_path %>

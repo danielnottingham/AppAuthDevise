@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @controle_portarium.nome %>
+</p>
+
+<p>
+  <strong>Documento:</strong>
+  <%= @controle_portarium.documento %>
+</p>
+
+<p>
+  <strong>Empresa:</strong>
+  <%= @controle_portarium.empresa %>
+</p>
+
+<p>
+  <strong>Placa:</strong>
+  <%= @controle_portarium.placa %>
+</p>
+
+<p>
+  <strong>Entrada:</strong>
+  <%= @controle_portarium.entrada %>
+</p>
+
+<p>
+  <strong>Saida:</strong>
+  <%= @controle_portarium.saida %>
+</p>
+
+<p>
+  <strong>Obs:</strong>
+  <%= @controle_portarium.obs %>
+</p>
+
+<%= link_to 'Edit', edit_controle_portarium_path(@controle_portarium) %> |
+<%= link_to 'Back', controle_portaria_path %>

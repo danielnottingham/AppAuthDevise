@@ -1,0 +1,2 @@
+class ControlePortarium < ApplicationRecord
+end

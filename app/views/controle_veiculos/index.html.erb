@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Controle Veiculos</h1>
+
+<table class="table table-sm table-dark">
+  <thead>
+    <tr>
+      <th>Motorista</th>
+      <th>Placa</th>
+      <th>Entrada</th>
+      <th>Saida</th>
+      <th>Obs</th>
+      <th><%= link_to 'PDF', controle_veiculos_path(format: :pdf) ,class: "btn btn-danger" %></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @controle_veiculos.each do |controle_veiculo| %>
+      <tr>
+        <td><%= controle_veiculo.motorista %></td>
+        <td><%= controle_veiculo.placa %></td>
+        <td><%= controle_veiculo.entrada %></td>
+        <td><%= controle_veiculo.saida %></td>
+        <td><%= controle_veiculo.obs %></td>
+        <td><%= link_to 'Show', controle_veiculo, class: "btn btn-warning" %></td>
+        <td><%= link_to 'Edit', edit_controle_veiculo_path(controle_veiculo), class: "btn btn-secondary" %></td>
+        <td><%= link_to 'Destroy', controle_veiculo, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Controle Veiculo', new_controle_veiculo_path, class: "btn btn-success" %>
+<br><br>
+<%= link_to 'Home', users_backoffice_welcome_index_path,  class: "btn btn-dark"%>

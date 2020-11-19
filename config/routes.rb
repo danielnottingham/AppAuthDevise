@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :controle_portaria
+  resources :controle_veiculos
   namespace :users_backoffice do
     get 'welcome/index'
   end
