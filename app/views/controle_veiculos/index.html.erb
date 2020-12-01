@@ -20,8 +20,8 @@
       <tr>
         <td><%= controle_veiculo.motorista %></td>
         <td><%= controle_veiculo.placa %></td>
-        <td><%= controle_veiculo.entrada %></td>
-        <td><%= controle_veiculo.saida %></td>
+        <td><%= controle_veiculo.entrada.strftime("%d/%m/%Y - %H:%M") %></td>
+        <td><%= controle_veiculo.saida.strftime("%d/%m/%Y - %H:%M") %></td>
         <td><%= controle_veiculo.obs %></td>
         <td><%= link_to 'Show', controle_veiculo, class: "btn btn-warning" %></td>
         <td><%= link_to 'Edit', edit_controle_veiculo_path(controle_veiculo), class: "btn btn-secondary" %></td>
@@ -33,6 +33,6 @@
 
 <br>
 
-<%= link_to 'New Controle Veiculo', new_controle_veiculo_path, class: "btn btn-success" %>
+<%= link_to 'Novo registro', new_controle_veiculo_path, class: "btn btn-success" %>
 <br><br>
-<%= link_to 'Home', users_backoffice_welcome_index_path,  class: "btn btn-dark"%>
+<%= link_to 'Área do Usuário', users_backoffice_welcome_index_path,  class: "btn btn-dark"%>

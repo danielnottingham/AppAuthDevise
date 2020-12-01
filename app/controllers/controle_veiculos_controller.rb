@@ -5,7 +5,10 @@ class ControleVeiculosController < ApplicationController
   # GET /controle_veiculos
   # GET /controle_veiculos.json
   def index
-    @controle_veiculos = ControleVeiculo.all
+    respond_to do |format|
+      format.html { @controle_veiculos = ControleVeiculo.all }
+      format.pdf { @controle_veiculos = ControleVeiculo.all }
+    end
   end
 
   # GET /controle_veiculos/1
@@ -25,7 +28,6 @@ class ControleVeiculosController < ApplicationController
   # POST /controle_veiculos
   # POST /controle_veiculos.json
   def create
-    binding.pry
     @controle_veiculo = ControleVeiculo.new(controle_veiculo_params)
 
     respond_to do |format|

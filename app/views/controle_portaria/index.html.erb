@@ -12,6 +12,7 @@
       <th>Entrada</th>
       <th>Saida</th>
       <th>Obs</th>
+      <th><%= link_to 'PDF', controle_portaria_path(format: :pdf) ,class: "btn btn-danger" %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,8 +24,8 @@
         <td><%= controle_portarium.documento %></td>
         <td><%= controle_portarium.empresa %></td>
         <td><%= controle_portarium.placa %></td>
-        <td><%= controle_portarium.entrada %></td>
-        <td><%= controle_portarium.saida %></td>
+        <td><%= controle_portarium.entrada.strftime("%d/%b/%Y - %H:%M") %></td>
+        <td><%= controle_portarium.saida.strftime("%d/%b/%Y - %H:%M") %></td>
         <td><%= controle_portarium.obs %></td>
         <td><%= link_to 'Show', controle_portarium, class: "btn btn-warning" %></td>
         <td><%= link_to 'Edit', edit_controle_portarium_path(controle_portarium), class: "btn btn-secondary" %></td>
@@ -36,7 +37,7 @@
 
 <br>
 
-<%= link_to 'New Controle Portarium', new_controle_portarium_path, class: "btn btn-success" %>
+<%= link_to 'Novo registro', new_controle_portarium_path, class: "btn btn-success" %>
 <br><br>
-<%= link_to 'Home', users_backoffice_welcome_index_path,  class: "btn btn-dark"%>
+<%= link_to 'Área do Usuário', users_backoffice_welcome_index_path,  class: "btn btn-dark"%>
 
